@@ -6,7 +6,7 @@ Stable tag: 1.3.14
 ShoutEm API Wordpress plugin lets you turn your website into a full-featured mobile application in minutes using ShoutEm Mobile App Builder. WordPress.com VIP version.
 == Description ==
 
-**Note: This version of the plugin is intended for WordPress.com VIP sites. If your sites is hosted elsewhere, take a look at [the vanilla plugin](http://wordpress.org/plugins/shoutem-api)**
+**Note: This version of the plugin is intended for WordPress.com VIP sites. If your site is hosted elsewhere, take a look at [the vanilla plugin](http://wordpress.org/plugins/shoutem-api)**
 
 ShoutEm API Wordpress plugin allows you to seamlessly turn your website into a full-featured mobile application in minutes using ShoutEm Mobile App Builder. Allow your users to view posts, like, share your content, and much more from mobile devices like iPhones, iPods, iPads or Android based phones. For more information, take a look at http://www.shoutem.com
 
