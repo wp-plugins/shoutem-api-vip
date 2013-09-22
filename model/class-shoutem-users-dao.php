@@ -21,12 +21,6 @@ class ShoutemUsersDao {
 	function __construct() {
 		$this->session_id_header = 'shoutem_api_session_id';
 	}
-	/**
-	 * Returns true if the user can be autenticated
-	 */
-	function validate_password($user, $password) {
-		return wp_check_password($password, $user->user_pass);
-	}
 	
 	function get_user($params) {
 		$username = $params['username'];

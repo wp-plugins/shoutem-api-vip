@@ -37,16 +37,7 @@ class ShoutemDao {
 		}
 		return $remaped_array;
 	}
-
-	protected function create_and_get_id($table_name, $record) {
-		global $wpdb;
-		$result = $wpdb->insert($table_name, $record);
-		if ($result) {
-			return $wpdb->insert_id;
-		}
-		return false;
-	}
-
+    
 	protected function current_gmtdate() {
 		return gmdate("Y-m-d H:i:s", time());
 	}
@@ -54,13 +45,6 @@ class ShoutemDao {
 	protected function current_date() {
 		return date("Y-m-d H:i:s", time());
 	}
-    
-    /*
-	protected function get_by_sql($query) {
-		global $wpdb;
-		return $wpdb->get_row(esc_sql($query), "ARRAY_A");
-	}
-    */
 
 	/**
 	 * Returns array containing results and paging info
@@ -95,23 +79,6 @@ class ShoutemDao {
 		);
 	}
     
-    /*
-	protected function get_data_by_sql($query, $offset, $limit) {
-		$limit_segment = sprintf(" LIMIT %d, %d", $offset, $limit);
-		$query .= $limit_segment;
-		global $wpdb;
-		return $wpdb->get_results(esc_sql($query), "ARRAY_A");
-	}
-
-	protected function find_by_sql($query, $params) {
-		$offset = $params['offset'];
-		$limit = $params['limit'];
-
-		$results = $this->get_data_by_sql($query,$offset, $limit+1);
-		return $this->add_paging_info($results, $params);
-	}
-    */
-
 	public function get_leading_image($post_id) {
 		//Post thumbnail is the wordpress term for leading-image
 

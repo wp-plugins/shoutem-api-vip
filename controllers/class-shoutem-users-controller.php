@@ -23,31 +23,9 @@ class ShoutemUsersController extends ShoutemController {
 	 * REQ PARAMS: username, password
 	 */
     /*
-     * TODO:    Uncomment once we switch to an authentication method
-     *          approved by Wordpress
+     * TODO:    Implement once we define an authentication method acceptable to Wordpress.com VIP
      *
 	function authenticate() {
-		$this->validate_required_params('username', 'password');
-		
-		$authenticate_dao = $this->dao_factory->get_users_dao();
-		$user = $authenticate_dao->get_user($this->request->params);
-		
-		if ($user == false) {
-			$this->response->send_error('401', "Invalid user credentials");
-		}
-		
-		if ($authenticate_dao->validate_password($user, $this->request->params['password'])) {
-			$session_id = $this->authentication->create_session_id($user);
-			
-			$this->response->send_json(array(
-					'user' => array(
-						'id' => $user->ID
-					),
-					'session_id' => $session_id
-				));
-		} else {
-			$this->response->send_error('401', "Invalid user credentials");
-		}
 	}
     */
 }
