@@ -133,7 +133,7 @@ class ShoutemApi {
 		}
         
         // check that method is of form class_part_1/class_part_2/...
-        if (preg_match('{^[a-z_]\w+(?:/[a-z_]\w+)*$}i', $_REQUEST['method'])) {
+        if (!preg_match('{^[a-z_]\w+(?:/[a-z_]\w+)*$}i', $_REQUEST['method'])) {
             $this->response->send_error(400, "Method not valid");
         }
 
